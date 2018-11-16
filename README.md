@@ -25,7 +25,8 @@ $ pip install -r requirements.txt
 
 # History
 
-* Python framework open sourced by Spotify in September 24th, 2012
+* Python framework open sourced by Spotify [September 24th,
+  2012](https://developer.spotify.com/community/news/2012/09/24/hello-world/)
 
 > It's a Python module that helps you build complex pipelines of batch jobs,
 > handle dependency resolution, and create visualizations to help manage
@@ -36,15 +37,20 @@ $ pip install -r requirements.txt
 > powers several Spotify features including recommendations, top lists, A/B test
 > analysis, external reports, internal dashboards, and many more.
 
-Conceptually, Luigi is similar to GNU Make where you have certain tasks and
-these tasks in turn may have dependencies on other tasks.
+Conceptually, Luigi is similar to [GNU Make](https://www.gnu.org/software/make/)
+where you have certain tasks and these tasks in turn may have dependencies on
+other tasks.
 
 In 2018, one of the original authors works on other interesting things - and
-there are more alternatives and sites for this problem.
+there are more alternatives and sites for this problem. 
 
 # User list
 
 * https://github.com/spotify/luigi#who-uses-luigi
+
+Example uses:
+
+* 
 
 # Extensions, Branches
 
