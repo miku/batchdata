@@ -4,7 +4,7 @@ Batch data processing with luigi. A short introduction.
 
 Workshop at PyCon Balkan, Belgrade, 2018-11-17, 17:00-18:30
 
-![](images/8_bit_luigi_by_raivcesleinadnayr-d3capc5.png)
+![](images/luigi8.png)
 
 # Setup
 
