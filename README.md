@@ -8,6 +8,8 @@ Workshop at PyCon Balkan, Belgrade, 2018-11-17, 17:00-18:30
 
 # Setup
 
+* Python 3 (3.6.4)
+
 Clone (or fork) this repo:
 
 ```
@@ -21,3 +23,4 @@ Prepare your isolated setup and install the requirements:
 $ pip install -r requirements.txt
 ```
 
+# 
