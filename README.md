@@ -45,3 +45,15 @@ there are more alternatives and sites for this problem.
 # User list
 
 * https://github.com/spotify/luigi#who-uses-luigi
+
+# Extensions, Branches
+
+* https://github.com/pharmbio/sciluigi
+
+> A light-weight wrapper library around Spotify's Luigi workflow system to make
+> writing scientific workflows more fluent, flexible and modular.
+
+* https://github.com/scipipe/scipipe, http://scipipe.org/
+
+> SciPipe is a library for writing Scientific Workflows, sometimes also called
+> "pipelines", in the Go programming language.
