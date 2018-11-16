@@ -42,7 +42,10 @@ where you have certain tasks and these tasks in turn may have dependencies on
 other tasks.
 
 In 2018, one of the original authors works on other interesting things - and
-there are more alternatives and sites for this problem. 
+there are more alternatives and sites for this problem.
+
+It's a small open-source project, with currently 10435 stars on GitHub, 537
+people on the mailing list with about 905 topics.
 
 # User list
 
@@ -50,7 +53,30 @@ there are more alternatives and sites for this problem.
 
 Example uses:
 
-* 
+* Processing Hotel Reviews with Python
+* Create index of scientific articles of heterogeneous sources
+*
+
+# Random things from the mailing list
+
+## Can Luigi replace my clunky build framework?
+
+> Over the last decade or so I implemented my own dependency 'pipeline'
+> framework for scientific computing, and it is in desperate need of a major
+> overhaul that I would rather not do (well mostly not).  I've just discovered
+> Luigi which is surprisingly similar in concept, but much much more solid and
+> complete
+
+## Open source projects that use Luigi
+
+> I'm refactoring an ETL process which is built on Luigi and am rethinking our
+project organization. One of our most common tasks is to standardize and
+integrate a given type of dataset as acquired from dozens of different sources
+in various formats. An example may be building a nationwide database of
+property records by acquiring, standardizing, and integrating property records
+from dozens or hundreds of local governments, all of which have completely
+different source formats.
+
 
 # Extensions, Branches
 
