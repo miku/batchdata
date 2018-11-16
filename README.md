@@ -39,29 +39,9 @@ $ pip install -r requirements.txt
 Conceptually, Luigi is similar to GNU Make where you have certain tasks and
 these tasks in turn may have dependencies on other tasks.
 
-----
+In 2018, one of the original authors works on other interesting things - and
+there are more alternatives and sites for this problem.
 
-> I'm refactoring an **ETL process** which is built on Luigi and am rethinking our
-> project organization. One of our most common tasks is to standardize and
-> integrate a given type of dataset as acquired from dozens of different sources
-> in various formats. **An example may be building a nationwide database of
-> property records by acquiring, standardizing, and integrating property records
-> from dozens or hundreds of local governments, all of which have completely
-> different source formats**. 
+# User list
 
-> I'd love study some sizable open-source projects that use Luigi, especially
-those with a similar use case. I'm looking for approaches to things like
-packaging and deploying pipelines, test organization, separation of Luigi tasks
-from utility/processing functions, organizing modules and sub-packages, design
-patterns for reusing tasks that handle variable input formats and produce
-standardized outputs, etc.
-
-So far I've found the following projects:
-
-* Open edX Data Pipeline: https://github.com/edx/edx-analytics-pipeline
-* FBI Crime Data API: https://github.com/fbi-cde/crime-data-api
-* siskin: https://github.com/miku/siskin
-
-Are there other well-organized open source projects worth browsing?
-
-----
+* https://github.com/spotify/luigi#who-uses-luigi
