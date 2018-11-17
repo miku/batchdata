@@ -17,11 +17,21 @@ $ git clone https://github.com/miku/batchdata.git
 $ cd batchdata
 ```
 
-Prepare your isolated setup and install the requirements:
+Prepare your isolated setup and install the requirements (mostly just luigi,
+maybe ipython for a better console):
 
 ```
 $ pip install -r requirements.txt
 ```
+
+# TOC
+
+* Basics
+* Create output
+* Parameters
+* Defining dependencies
+* WordCount
+* TopArtists
 
 # History
 
@@ -132,9 +142,78 @@ different source formats.
 simultaneously
 * the scheduler provides an API, which can be used for visualization
 
-# Example: Basic
+# Example 1: Basics
 
 Creating a simple class, testing the command line integration.
+
+### Your task
+
+Edit the file `Basics/main.py` and fill in the blanks.
+
+For example, if the task would be named `Hello` this would might be the output:
+
+```shell
+$ python main.py Hello --local-scheduler
+/Users/tir/.virtualenvs/batchdata/lib/python3.6/site-packages/luigi/parameter.py:284: UserWarning: Parameter "task_process_context" with value "None" is not of type string.
+  warnings.warn('Parameter "{}" with value "{}" is not of type string.'.format(param_name, param_value))
+DEBUG: Checking if Hello() is complete
+/Users/tir/.virtualenvs/batchdata/lib/python3.6/site-packages/luigi/worker.py:401: UserWarning: Task Hello() without outputs has no custom complete() method
+  is_complete = task.complete()
+INFO: Informed scheduler that task   Hello__99914b932b   has status   PENDING
+INFO: Done scheduling tasks
+INFO: Running Worker with 1 processes
+DEBUG: Asking scheduler for work...
+DEBUG: Pending tasks: 1
+INFO: [pid 81698] Worker Worker(salt=360519278, workers=1, host=apollo.local, username=tir, pid=81698) running   Hello()
+Hello World
+INFO: [pid 81698] Worker Worker(salt=360519278, workers=1, host=apollo.local, username=tir, pid=81698) done      Hello()
+DEBUG: 1 running tasks, waiting for next task to finish
+INFO: Informed scheduler that task   Hello__99914b932b   has status   DONE
+DEBUG: Asking scheduler for work...
+DEBUG: Done
+DEBUG: There are no more tasks to run at this time
+INFO: Worker Worker(salt=360519278, workers=1, host=apollo.local, username=tir, pid=81698) was stopped. Shutting down Keep-Alive thread
+INFO:
+===== Luigi Execution Summary =====
+
+Scheduled 1 tasks of which:
+* 1 ran successfully:
+    - 1 Hello()
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+```
+
+# Example 2: Creating Output
+
+Outputs can be more than files, so they are called targets. A local file is a
+`luigi.LocalTarget` and allows for typical operations on files:
+
+* `open`, `exists`, `copy`, `move`, `remove` and more methods
+* has a `path`
+
+You can inspect the available methods in the console:
+
+```python
+>>> target = luigi.LocalTarget(path='my.file')
+>>> f = target.open('w') # 
+>>> type(f)
+luigi.format.TextWrapper
+>>> f.
+f.buffer         f.detach         f.fileno         f.line_buffering f.read           f.readlines      f.tell           f.write
+f.close          f.encoding       f.flush          f.name           f.readable       f.seek           f.truncate       f.writelines
+f.closed         f.errors         f.isatty         f.newlines       f.readline       f.seekable       f.writable
+```
+
+This wrapper implements atomic file writes, so only when the file is closed, the
+target path will be present.
+
+### Your task
+
+Fill in the blanks in `CreateOutput/main.py`.
+
+# Example: Parameters
 
 # Example: WordCount
 
