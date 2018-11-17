@@ -35,4 +35,33 @@ class Hello(luigi.Task):
 
 if __name__ == '__main__':
     luigi.run()
+```
 
+----
+
+# Parameters
+
+```python
+import luigi
+
+class Hello(luigi.Task):
+    
+    # 1. Add a parameter 'name' and run the task. Add a default.
+    name = luigi.Parameter(default='World', description='user name')
+
+    def run(self):
+        """ XXX: to implement. """
+
+        # 2. Write 'Hello <name>' to the output file.
+        with self.output().open('w') as output:
+            output.write('Hello %s\n' % self.name)
+
+    def output(self):
+        return luigi.LocalTarget(path="output.file")
+
+
+
+if __name__ == '__main__':
+    luigi.run(local_scheduler=True)
+
+```

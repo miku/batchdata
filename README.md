@@ -213,13 +213,53 @@ target path will be present.
 
 Fill in the blanks in `CreateOutput/main.py`.
 
-# Example: Parameters
+# Example 3: Parameters
 
-# Example: WordCount
+Tasks can have parameters, why are automatically turned into command line
+arguments. They are typed (int, strings, date, date ranges).
+
+* luigi.Parameter, default to a string
+* luigi.IntParameter
+* luigi.DateParameter
+
+All parameters are "required", but can specify a default via `default` keyword parameter.
+
+When running, command line args get turned into parameters (with type checks), a
+parameter `my_param` could be specified via:
+
+```
+$ python main.py --my-param
+```
+
+When running with the `help` flag, a optional given `description` will be
+displayed (if specified as keyword argument to the parameter):
+
+```
+$ python main.py --help
+```
+
+In the task, you can access the parameter value as a simple attribute. This
+attribute will have the type of the parameter (e.g. string, int or datetime
+object).
+
+### Your task
+
+Fill in the blanks in `Parameters/main.py`.
+
+Here is some expected error at some point:
+
+```
+...
+luigi.parameter.MissingParameterException: ... requires the 'name' parameter to be set 
+```
+
+# Example 4: Dependencies
+
+# Example 5: WordCount
 
 Classic wordcount.
 
-# Example: TopArtists
+# Example 6: TopArtists
 
 Small pipeline.
 
@@ -229,3 +269,5 @@ Small pipeline.
 * creating new parameter types
 
 # Wrap Up
+
+Experiences, advantages and disadvantages.
