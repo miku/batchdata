@@ -96,6 +96,10 @@ different source formats.
 > SciPipe is a library for writing Scientific Workflows, sometimes also called
 > "pipelines", in the Go programming language.
 
+# Alternatives
+
+* http://bytepawn.com/luigi-airflow-pinball.html
+
 # What is luigi?
 
 * three core notions: task, target, dependency
@@ -127,5 +131,19 @@ simultaneously
 
 # Example: Basic
 
+Creating a simple class, testing the command line integration.
+
 # Example: WordCount
 
+Classic wordcount.
+
+# Example: TopArtists
+
+Small pipeline.
+
+# Extensions
+
+* subclassing tasks (e.g. gluish.BaseTask)
+* creating new parameter types
+
+# Wrap Up
