@@ -99,6 +99,9 @@ different source formats.
 # Alternatives
 
 * http://bytepawn.com/luigi-airflow-pinball.html
+* https://soundcloud.com/the-airflow-podcast/episode-4-competitors
+
+![](images/confused.png)
 
 # What is luigi?
 
