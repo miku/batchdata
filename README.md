@@ -44,7 +44,7 @@ other tasks.
 In 2018, one of the original authors works on other interesting things - and
 there are more alternatives and sites for this problem.
 
-It's a small open-source project, with currently 10435 stars on GitHub, 537
+It's a smaller open-source project, with currently 10435 stars on GitHub, 537
 people on the mailing list with about 905 topics.
 
 # User list
@@ -55,7 +55,14 @@ Example uses:
 
 * Processing Hotel Reviews with Python
 * Create index of scientific articles of heterogeneous sources
-*
+* Bioinformatics (http://uppnex.se/twiki/do/view/Courses/EinfraMPS2015/Luigi.html)
+
+> Luigi is a little special compared to most other workflow solutions, that the
+> dependency graph is by default defined by hard-coding the upstream dependent
+> task, inside each task. In this regard, luigi tasks are quite similar to
+> funcitons in functional programming, where each function knows everything
+> needed to provide it's answer, including all the other functions that need to
+> be executed to get there.
 
 # Random things from the mailing list
 
@@ -76,7 +83,6 @@ in various formats. An example may be building a nationwide database of
 property records by acquiring, standardizing, and integrating property records
 from dozens or hundreds of local governments, all of which have completely
 different source formats.
-
 
 # Extensions, Branches
 
