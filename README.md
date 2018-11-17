@@ -336,9 +336,23 @@ Classic wordcount. Short code review of
 
 # Visualization
 
-Example for visualization in `Visualization/main.py`.
+Example for visualization in `Visualization/main.py` which requires `luigid` to
+be running ([http://localhost:8082](http://localhost:8082)).
 
 ![](images/graph.png)
+
+It is possible to run tasks in parallel by specifying the number of workers.
+
+```shell
+$ python main.py --workers 4
+```
+
+There is a `Makefile` in the `Visualization` directory to clear the dummy output
+with:
+
+```
+$ make clean
+```
 
 # Extensions
 
@@ -348,8 +362,9 @@ There are various target types, most of them can be found in:
 
 Other extension points:
 
-* subclassing tasks (e.g. gluish.BaseTask)
+* subclassing tasks (e.g. gluish.BaseTask for automatic paths)
 * creating new parameter types
+* writing tooling around luigi
 
 # Wrap Up
 
