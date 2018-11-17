@@ -105,3 +105,5 @@ venv.bak/
 
 .vscode
 CreateOutput/output.file
+Dependencies/plays.tsv
+Dependencies/top-*.file

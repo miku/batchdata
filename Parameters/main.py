@@ -22,14 +22,11 @@ import luigi
 class Hello(luigi.Task):
     
     # 1. Add a parameter 'name' and run the task. Add a default later.
-    name = luigi.Parameter()
 
     def run(self):
         """ XXX: to implement. """
 
         # 2. Write 'Hello <name>' to the output file.
-        with self.output().open('w') as output:
-            output.write('Hello %s\n' % self.name)
 
     def output(self):
         return luigi.LocalTarget(path="output.file")

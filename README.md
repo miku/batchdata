@@ -255,13 +255,83 @@ luigi.parameter.MissingParameterException: ... requires the 'name' parameter to 
 
 # Example 4: Dependencies
 
+Things get interesting, when workflows get a bit more complicated as they
+require certain inputs.
+
+Tasks can add a `requires` method which returns a task (or list or dict of
+tasks) that need to be done, before the task can run.
+
+How does the the framework determines, if a task has been run?
+
+* either looking at the target (e.g. if a file exists, which is possible due to atomicity)
+* or task implements a separate `complete` method that does custom checks
+
+Here is how it could look like:
+
+```python
+class SomeTask(luigi.Task):
+
+    def requires(self):
+        return OtherTask(self)
+      
+    def run(self):
+        f = self.input().open()
+        # read from a (possibly LocalTarget) object
+```
+
+Note: The input of the dependent task is available via `self.input` (which
+refers to the *output* of the other task already, *not* the task object itself). So
+the output of the `OtherTask` being a typical `LocalTarget` you can just open
+and read from it.
+
+### Your task
+
+Fill in the blanks in `Dependencies/main.py`.
+
+This is a two task sequence. One tasks produces some synthetic data, e.g. the
+number of plays of a song in a country (tld):
+
+```
+call me maybe	me	65
+gangnam style	rs	100
+gangnam style	rs	45
+battle scars	hr	64
+call me maybe	me	17
+call me maybe	si	32
+battle scars	si	18
+gangnam style	ba	93
+call me maybe	me	60
+battle scars	ba	45
+```
+
+Your task is to implement a basic aggregation for a single country.
+
+Here is one possible output:
+
+```
+===== Luigi Execution Summary =====
+
+Scheduled 2 tasks of which:
+* 1 complete ones were encountered:
+    - 1 Producer()
+* 1 ran successfully:
+    - 1 TopSongs(tld=rs)
+
+This progress looks :) because there were no failed tasks or missing dependencies
+```
+
+One possible output could be:
+
+```
+$ cat top-rs.file
+gangnam style	529
+battle scars	268
+call me maybe	115
+```
+
 # Example 5: WordCount
 
 Classic wordcount.
-
-# Example 6: TopArtists
-
-Small pipeline.
 
 # Extensions
 
