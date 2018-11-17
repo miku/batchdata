@@ -95,3 +95,37 @@ different source formats.
 
 > SciPipe is a library for writing Scientific Workflows, sometimes also called
 > "pipelines", in the Go programming language.
+
+# What is luigi?
+
+* three core notions: task, target, dependency
+* as opposed to other frameworks, everything is Python (and not, say XML)
+
+# Task
+
+* a task is defined a python class
+* has mostly three methods: `requires`, `run` and `output`
+
+# Target
+
+* is the output (or outcome) of a task
+* this can be a file, but also an entry in a database, index, remote file (s3,
+  ftp), file on a distributed file system (hdfs)
+
+# Dependency
+
+* a task can declare zero, one or more dependencies
+* if a task has dependencies, they need to be present and fulfilled, before the task can run
+
+# Scheduler
+
+* luigi comes with two schedulers: local for development and a "central" scheduler (which you can also run locally)
+* the scheduler runs workers, which execute tasks (in parallel) - with multiple
+  users, also makes sure, two instances of the same task are not running
+simultaneously
+* the scheduler provides an API, which can be used for visualization
+
+# Example: Basic
+
+# Example: WordCount
+
