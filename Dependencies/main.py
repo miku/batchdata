@@ -45,34 +45,19 @@ class TopSongs(luigi.Task):
     
     # 2. Add a `requires` method to require task `Producer`.
 
-    def requires(self):
-        return Producer()
-
     def run(self):
         """ Basic aggregation. """
 
         # 3. Open input a count and sum the occurences of each song for the
         #    given country. (Hint: collections.Counter can be helpful).
-        
-        counter = collections.Counter()
 
-        with self.input().open() as handle:
-            for line in handle:
-                fields = line.strip().split('\t')
-                if not fields[1] == self.tld:
-                    continue
-                counter[fields[0]] += int(fields[2])
 
         # 4. Write an output TSV with two columns [song name, plays] ordered by
         #    plays descending.
-
-        with self.output().open('w') as output:
-            for name, value in counter.most_common():
-                output.write('%s\t%s\n' % (name, value))
     
     def output(self):
+        pass
         # 5. Use different outputs for different tlds.
-        return luigi.LocalTarget(path="top-%s.file" % self.tld)
 
 
 
