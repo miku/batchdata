@@ -26,12 +26,15 @@ $ pip install -r requirements.txt
 
 # TOC
 
-* Basics
-* Create output
-* Parameters
-* Defining dependencies
-* WordCount
-* TopArtists
+* [History](https://github.com/miku/batchdata#history)
+* [Example 1: Basics](https://github.com/miku/batchdata#example-1-basics)
+* [Example 2: Creating output](https://github.com/miku/batchdata#example-2-creating-output)
+* [Example 3: Parameters](https://github.com/miku/batchdata#example-3-parameters)
+* [Example 4: Defining dependencies](https://github.com/miku/batchdata#example-4-dependencies)
+* [Example 5: WordCount](https://github.com/miku/batchdata#example-5-wordcount)
+* [Visualization](https://github.com/miku/batchdata#visualization)
+* [Extensions](https://github.com/miku/batchdata#extensions)
+* [Wrap Up](https://github.com/miku/batchdata#wrap-up)
 
 # History
 
