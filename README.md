@@ -218,9 +218,9 @@ Fill in the blanks in `CreateOutput/main.py`.
 Tasks can have parameters, why are automatically turned into command line
 arguments. They are typed (int, strings, date, date ranges).
 
-* luigi.Parameter, default to a string
-* luigi.IntParameter
-* luigi.DateParameter
+* `luigi.Parameter`, defaults to string
+* `luigi.IntParameter`
+* `luigi.DateParameter`
 
 All parameters are "required", but can specify a default via `default` keyword parameter.
 
