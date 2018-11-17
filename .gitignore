@@ -107,3 +107,4 @@ venv.bak/
 CreateOutput/output.file
 Dependencies/plays.tsv
 Dependencies/top-*.file
+Visualization/throwaway-*

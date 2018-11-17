@@ -331,9 +331,22 @@ call me maybe	115
 
 # Example 5: WordCount
 
-Classic wordcount.
+Classic wordcount. Short code review of
+[https://github.com/spotify/luigi/blob/master/examples/wordcount.py](https://github.com/spotify/luigi/blob/master/examples/wordcount.py).
+
+# Visualization
+
+Example for visualization in `Visualization/main.py`.
+
+![](images/graph.png)
 
 # Extensions
+
+There are various target types, most of them can be found in:
+
+* https://github.com/spotify/luigi/tree/master/luigi/contrib
+
+Other extension points:
 
 * subclassing tasks (e.g. gluish.BaseTask)
 * creating new parameter types
