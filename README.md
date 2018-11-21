@@ -1,6 +1,6 @@
 # batchdata
 
-Batch data processing with luigi. A short introduction.
+Batch data processing with [luigi](https://github.com/spotify/luigi). A short introduction.
 
 Workshop at [PyCon Balkan](https://pyconbalkan.com), Belgrade, 2018-11-17, 17:00-18:30
 
