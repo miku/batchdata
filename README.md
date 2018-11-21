@@ -2,7 +2,7 @@
 
 Batch data processing with luigi. A short introduction.
 
-Workshop at PyCon Balkan, Belgrade, 2018-11-17, 17:00-18:30
+Workshop at [PyCon Balkan](https://pyconbalkan.com), Belgrade, 2018-11-17, 17:00-18:30
 
 ![](images/luigi8.png)
 
@@ -200,7 +200,7 @@ You can inspect the available methods in the console:
 
 ```python
 >>> target = luigi.LocalTarget(path='my.file')
->>> f = target.open('w') # 
+>>> f = target.open('w') #
 >>> type(f)
 luigi.format.TextWrapper
 >>> f.
@@ -253,7 +253,7 @@ Here is some expected error at some point:
 
 ```
 ...
-luigi.parameter.MissingParameterException: ... requires the 'name' parameter to be set 
+luigi.parameter.MissingParameterException: ... requires the 'name' parameter to be set
 ```
 
 # Example 4: Dependencies
@@ -276,7 +276,7 @@ class SomeTask(luigi.Task):
 
     def requires(self):
         return OtherTask(self)
-      
+
     def run(self):
         f = self.input().open()
         # read from a (possibly LocalTarget) object
