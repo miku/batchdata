@@ -109,6 +109,8 @@ different source formats.
 > SciPipe is a library for writing Scientific Workflows, sometimes also called
 > "pipelines", in the Go programming language.
 
+* https://github.com/miku/gluish, utilities around luigi
+
 # Alternatives
 
 * http://bytepawn.com/luigi-airflow-pinball.html
